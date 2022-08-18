@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w-75 mx-auto py-4 ">
+        <h3 class="py-3 fw-bolder ">Product Managment System </h3>
+        <label for="ProductNameInput"> ProductName:</label>
+        <input type="text" class="my-2 form-control" id="ProductNameInput" onblur="validationName()">
+        <div class="alert alert-danger" id="alertName">
+            <p>please enter valid Name</p>
+        </div>
+        <label for="ProductPriceInput"> ProductPrice:</label>
+
+
+        <input type="text" class="my-2 form-control" id="ProductPriceInput" onblur="validationPrice()">
+        <div class="alert alert-danger " id="alertPrice">
+            <p>please enter price</p>
+        </div>
+        <label for="ProductCategoryInput"> ProductCategory:</label>
+        <input type="text" class="my-2 form-control" id="ProductCategoryInput" onblur="validationProductcategory()">
+        <div class="alert alert-danger " id="alertCtegory">
+            <p>please enter a valid product category</p>
+        </div>
+        <label for="ProductDescriptionInput"> ProductDescription:</label>
+
+        <textarea  type="text" class="my-2 form-control" id="ProductDescriptionInput" onblur="validationProductDesc()"></textarea>
+        <div class="alert alert-danger " id="alertdesc">
+            <p>Description Must start with one uppercase</p>
+        </div>
+
+        
+        
+        <div class="alert alert-danger " id="allinputs ">
+            all Inputs are required
+        </div>
+        <button onclick="AddProduct()" id="addbtn" class="btn btn-outline-info"> Add Product</button>
+        <button onclick="edit()" id="editbtn" class="btn btn-outline-info"> Edit product</button>
+        <button onclick="clearForm()" class="btn btn-outline-danger"> Clear form</button>
+
+
+    </div>
+    <input type="search" placeholder="search" onkeyup="search()" class="form-control w-50 mx-auto" id="searchInput">
+
+    <table class="table w-75 mx-auto table-striped py-3 ">
+        <thead>
+            <th>index</th>
+            <th>ProductName</th>
+            <th>ProductPrice</th>
+            <th>ProductCategory</th>
+            <th>ProductDesc</th>
+            <th>update</th>
+            <th>delete</th>
+
+
+
+        </thead>
+        <!-- id ياحج مش class -->
+        <tbody id="demo">
+
+
+        </tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
